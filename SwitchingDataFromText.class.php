@@ -82,7 +82,7 @@ class SwitchingDataFromText
 
         // 深夜00:00～switchTimeの間ならswtTimeNoに-1をセット
         if (strtotime($nowTime) >= strtotime("00:00") &&
-            strtotime($nowTime) <= strtotime($switchTime)) {
+            strtotime($nowTime) < strtotime($switchTime)) {
             $this->swtTimeNo = -1;
         }
 
